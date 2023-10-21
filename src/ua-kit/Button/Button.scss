@@ -1,0 +1,27 @@
+@import "../style/index.scss";
+.Button {
+  $this: &;
+  padding: 10px 30px;
+  height: max-content;
+  width: max-content;
+  color: white;
+  background-color: $color-primary;
+  border: 1px solid $color-primary;
+  outline: transparent;
+  transition: all .3s;
+  cursor: pointer;
+  &:hover {
+    background-color: $color-primary-hover;
+  }
+  &.Button__disabled {
+    color: $color-disabled;
+    background-color: $color-disabled-secondary;
+    border-color: $color-disabled-secondary;
+    cursor: default;
+    &:hover {
+      color: $color-disabled;
+      background-color: $color-disabled-secondary;
+      border-color: $color-disabled-secondary;
+    }
+  }
+}
