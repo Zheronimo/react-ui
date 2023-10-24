@@ -14,12 +14,14 @@ export interface ButtonProps extends DOMAttributes<HTMLButtonElement> {
 
 const Button: React.FC<ButtonProps> = ({className, children, isDisabled, typeButton, onClick, ...props}) => {
     return (
-        <button className={
-            classNames("Button", className, {"Button__disabled": isDisabled})}
-                disabled={isDisabled}
-                type={typeButton}
-                onClick={onClick}
-                {...props}
+        <button
+            className={
+                classNames("Button", className, {"Button__disabled": isDisabled})
+            }
+            disabled={isDisabled}
+            type={typeButton}
+            onClick={onClick}
+            {...props}
         >
             {children}
         </button>
